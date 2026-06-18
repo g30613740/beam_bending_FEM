@@ -85,11 +85,12 @@ void evaluate_parameters_in_x (
 
 int main () {
 
+
 	///////////////////////////////////
 	// 1. Parameters (global constants)
 	///////////////////////////////////
 
-	ifstream file ("../../data/parameters.txt");
+	ifstream file ("data/parameters.txt");
     string line;
 
 	long double P;
@@ -366,10 +367,11 @@ int main () {
 
 
     // BACK COURSE Gauss method
-    for (size_t i = N_DOF - 1; i >= 0; --i) {
-    	X[i] = B[i];
-    	for (size_t j = i + 1; j < N_DOF; ++j)
+    for (size_t i = N_DOF - 1; i < N_DOF; --i) {
+     	X[i] = B[i];
+    	for (size_t j = i + 1; j < N_DOF; ++j) {
     		X[i] -= A[i][j] * X[j];
+     	}
     	X[i] /= A[i][i];
     }
 
@@ -401,35 +403,35 @@ int main () {
     	Q_grid[i] = Q;
     }
 
-    ofstream x_file ("FEM_result_x.txt");
+    ofstream x_file ("results/FEM_result_x.txt");
     if (x_file.is_open ()) {
     	for (size_t i = 0; i < num_points; ++i)
     		x_file << x_grid[i] << ' ';
     }
     x_file.close ();
 
-    ofstream w_file ("FEM_res_W.txt");
+    ofstream w_file ("results/FEM_res_W.txt");
     if (w_file.is_open ()) {
     	for (size_t i = 0; i < num_points; ++i)
     		w_file << W_grid[i] << ' ';
     }
     w_file.close ();
 
-    ofstream t_file ("FEM_res_Theta.txt");
+    ofstream t_file ("results/FEM_res_Theta.txt");
     if (t_file.is_open ()) {
     	for (size_t i = 0; i < num_points; ++i)
     		t_file << T_grid[i] << ' ';
     }
     t_file.close ();
 
-    ofstream m_file ("FEM_res_Moment.txt");
+    ofstream m_file ("results/FEM_res_Moment.txt");
     if (m_file.is_open ()) {
     	for (size_t i = 0; i < num_points; ++i)
     		m_file << M_grid[i] << ' ';
     }
     m_file.close ();
 
-    ofstream q_file ("FEM_res_Q.txt");
+    ofstream q_file ("results/FEM_res_Q.txt");
     if (q_file.is_open ()) {
     	for (size_t i = 0; i < num_points; ++i)
     		q_file << Q_grid[i] << ' ';
