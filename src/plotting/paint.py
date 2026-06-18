@@ -2,7 +2,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 
 
-f = open ("coordinates.txt", 'r')
+f = open ("../../data/coordinates.txt", 'r')
 parameters = [float (i) for i in f.readline ().split ()]
 x_Q1 = parameters[0]
 x_Q2 = parameters[1]
@@ -16,24 +16,24 @@ f.close ()
 
 # SAGE DATA
 
-f = open ("sage_result_x.txt", 'r') 
+f = open ("../../results/sage_result_x.txt", 'r') 
 x_Sage = [float (i) for i in f.readline ().split ()]
 f.close()
 
-f = open ("sage_res_Q.txt", 'r') 
+f = open ("../../results/sage_res_Q.txt", 'r') 
 Q_Sage = [float (i) for i in f.readline ().split ()]
 f.close()
 
-f = open ("sage_res_Moment.txt", 'r') 
+f = open ("../../results/sage_res_Moment.txt", 'r') 
 M_Sage = [float (i) for i in f.readline ().split ()]
 # print ("M_Sage = ", M_Sage)
 f.close()
 
-f = open ("sage_res_Theta.txt", 'r') 
+f = open ("../../results/sage_res_Theta.txt", 'r') 
 Theta_Sage = [float (i) for i in f.readline ().split ()]
 f.close()
 
-f = open ("sage_res_W.txt", 'r')
+f = open ("../../results/sage_res_W.txt", 'r')
 W_Sage = [float (i) for i in f.readline ().split ()]
 f.close()
 
@@ -41,23 +41,23 @@ f.close()
 
 # FEM DATA
 
-f = open ("FEM_result_x.txt", 'r') 
+f = open ("../../results/FEM_result_x.txt", 'r') 
 x_FEM = [float (i) for i in f.readline ().split ()]
 f.close ()
 
-f = open ("FEM_res_Q.txt", 'r') 
+f = open ("../../results/FEM_res_Q.txt", 'r') 
 Q_FEM = [float (i) for i in f.readline ().split ()]
 f.close ()
 
-f = open ("FEM_res_Moment.txt", 'r') 
+f = open ("../../results/FEM_res_Moment.txt", 'r') 
 M_FEM = [float (i) for i in f.readline ().split ()]
 f.close ()
 
-f = open ("FEM_res_Theta.txt", 'r') 
+f = open ("../../results/FEM_res_Theta.txt", 'r') 
 Theta_FEM = [float (i) for i in f.readline ().split ()]
 f.close ()
 
-f = open ("FEM_res_W.txt", 'r')
+f = open ("../../results/FEM_res_W.txt", 'r')
 W_FEM = [float (i) for i in f.readline ().split ()]
 f.close ()
 
