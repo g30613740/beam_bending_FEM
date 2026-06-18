@@ -23,8 +23,8 @@ __pycache__/
 
 # Симлинки (если они создаются автоматически, их можно игнорировать,
 # но обычно они не мешают, и мы их оставляем)
-# parameters.txt
-# coordinates.txt
+parameters.txt
+coordinates.txt
 
 # Файлы, создаваемые редакторами и ОС
 .DS_Store
@@ -32,8 +32,3 @@ __pycache__/
 *~
 *.bak
 *.tmp
-
-# Если входные данные не нужно хранить в репозитории (раскомментируйте):
-# /data/parameters.txt
-# /data/coordinates.txt
-# /data/Балка_2025.xlsx
