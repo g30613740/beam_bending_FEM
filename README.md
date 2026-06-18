@@ -169,8 +169,7 @@ python3 paint.py</code></pre>
 
 <p>
     The plot clearly demonstrates the agreement between the analytical solution (Sage)
-    and the finite element method (C++). Minor differences may arise due to discretization
-    in the FEM approach.
+    and the finite element method (C++).
 </p>
 
 
