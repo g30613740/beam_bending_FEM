@@ -175,5 +175,5 @@ xy[4].vlines ([x_P], W_min, W_max, color = 'green', linestyle = '--')
 xy[4].vlines ([x_K], W_min, W_max, color = 'red', linestyle = '--')
 xy[4].vlines ([x_Q1, x_Q2], W_min, W_max, color = 'pink')
 
-fig.savefig ("result_plot.png")
+fig.savefig ("../../results/result_plot.png")
 plt.show ()
