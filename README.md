@@ -1,20 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Beam Bending Analysis – README</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 2em; line-height: 1.6; }
-        h1, h2 { color: #2c3e50; }
-        .tree { background: #f4f4f4; padding: 1em; border-radius: 5px; font-family: monospace; }
-        table { border-collapse: collapse; width: 100%; margin: 1em 0; }
-        th, td { border: 1px solid #ccc; padding: 0.5em; text-align: left; }
-        th { background: #ecf0f1; }
-        code { background: #f4f4f4; padding: 0.2em 0.4em; border-radius: 3px; }
-        .card { background: #f9f9f9; border-left: 4px solid #3498db; padding: 0.5em 1em; margin: 0.5em 0; }
-        pre { background: #eee; padding: 0.5em; border-radius: 3px; overflow-x: auto; }
-    </style>
-</head>
 <body>
 
 <h1>Beam Bending Analysis Project</h1>
