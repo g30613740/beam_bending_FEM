@@ -35,7 +35,7 @@ all: sage fem plot
 # Аналитическое решение (Sage)
 # -------------------------------
 .PHONY: sage
-sage: check_data_links
+sage: check_data_links | $(RESULTS_DIR)
 	@echo " Запуск аналитического решения в Sage..."
 	cd $(SAGE_DIR) && $(SAGE) beams_bending.sage
 	@echo " Результаты Sage сохранены в $(RESULTS_DIR)"
@@ -46,9 +46,9 @@ sage: check_data_links
 
 # Цель fem: сначала компиляция (при необходимости), затем запуск
 .PHONY: fem
-fem: $(FEM_TARGET)
+fem: $(FEM_TARGET) | $(RESULTS_DIR)
 	@echo "Запуск МКЭ (C++)..."
-	cd $(FEM_DIR) && ./beams_bending
+	$(FEM_TARGET)
 	@echo "Результаты FEM сохранены в $(RESULTS_DIR)"
 
 # Правило компиляции: создаём исполняемый файл в src/fem
